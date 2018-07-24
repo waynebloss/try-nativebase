@@ -16,34 +16,35 @@ export default class App extends React.Component {
     isLoadingComplete: false,
   };
   render() {
-    if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
-      return (
-        <AppLoading
-          startAsync={this.loadResourcesAsync}
-          onError={this.handleLoadingError}
-          onFinish={this.handleFinishLoading}
-        />
-      );
-    } else {
+    // if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
+    //   return (
+    //     <AppLoading
+    //       startAsync={this.loadResourcesAsync}
+    //       onError={this.handleLoadingError}
+    //       onFinish={this.handleFinishLoading}
+    //     />
+    //   );
+    // } else {
       return (
         <View style={styles.container}>
           <Text>Open up App.js to start working on your app!</Text>
         </View>
       );
-    }
+    // }
   }
 
   loadResourcesAsync = async () => {
-    return Promise.all([
-      // Asset.loadAsync([
-      //   require('./src/assets/images/abc.png'),
-      //   require('./src/assets/images/xyz.png'),
-      // ]),
-      Font.loadAsync({
-        'Roboto': require('native-base/Fonts/Roboto.ttf'),
-        'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf'),
-      }),
-    ]);
+    return Promise.resolve();
+    // return Promise.all([
+    //   // Asset.loadAsync([
+    //   //   requ ire('./src/assets/images/abc.png'),
+    //   //   requ ire('./src/assets/images/xyz.png'),
+    //   // ]),
+    //   // Font.loadAsync({
+    //   //   'Roboto': req uire('native-base/Fonts/Roboto.ttf'),
+    //   //   'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf'),
+    //   // }),
+    // ]);
   };
 
   handleLoadingError = error => {
