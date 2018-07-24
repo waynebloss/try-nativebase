@@ -4,12 +4,12 @@ import {
   Text,
   View,
 } from 'react-native';
-import {
-  AppLoading,
-  // Asset,
-  Font,
-  // Icon,
-} from 'expo';
+// import {
+//   AppLoading,
+//   // Asset,
+//   Font,
+//   // Icon,
+// } from 'expo';
 
 export default class App extends React.Component {
   state = {
